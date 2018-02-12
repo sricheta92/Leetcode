@@ -5,6 +5,11 @@ public class BinaryTreeNode {
 	private int data;
 	private BinaryTreeNode left,right;
 	
+	BinaryTreeNode(int data){
+		this.data = data;
+		left=  right = null;
+	}
+	
 	public int getData() {
 		return data;
 	}
