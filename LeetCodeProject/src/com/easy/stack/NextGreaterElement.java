@@ -25,7 +25,7 @@ public class NextGreaterElement {
 
 	public static void main(String[] args) {
 		NextGreaterElement a = new NextGreaterElement();
-		int[] findNums = {2,3,4};
+		int[] findNums = {1,3,4};
 		int[] nums = {1,2,3,4};
 		a.nextGreaterElement(findNums, nums);
 	}

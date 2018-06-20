@@ -4,7 +4,7 @@ public class ReverseInteger {
 
 	 public static int reverse(int x) {
 		 
-	  int i = 1;
+	/*  int i = 1;
       StringBuilder sb = new StringBuilder();
   int y = Math.abs(x);
 
@@ -17,9 +17,17 @@ public class ReverseInteger {
       }
      int reverse = Integer.parseInt(sb.toString());
    
-      return (x<0) ? -reverse : reverse;
+      return (x<0) ? -reverse : reverse;*/
+		 
+		 int rev_num = 0;
+		 
+		 while(x>0) {
+			 rev_num = rev_num*10 + x%10;
+			 x = x/10;
+		 }
+		 return rev_num;
 }
 	 public static void main(String[] args) {
-		System.out.println(reverse(1534236469));
+		System.out.println(reverse(3234234));
 	}
 }
