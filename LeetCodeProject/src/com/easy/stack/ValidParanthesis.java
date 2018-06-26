@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class ValidParanthesis {
 
-	 public static boolean isValid(String m) {
-	        char[] c = m.toCharArray();
+	 public static boolean isValid(String s) {
+	      /*  char[] c = m.toCharArray();
 	        Stack<Character> s = new Stack<Character>();
 	        
 	        
@@ -27,7 +27,51 @@ public class ValidParanthesis {
 	                }
 	            }
 	        }
-	     return s.isEmpty();       
+	     return s.isEmpty();       */
+		 
+		 
+	        char[] arr = s.toCharArray();
+	        Stack<Character> stack = new Stack<Character>();
+	        
+	        for(int i =0;i<arr.length;i++){
+	            
+	        	   switch(arr[i]){
+                   
+	                case '}' : if(!stack.isEmpty()){
+	                                char c = stack.peek();
+	                                if(c== '{'){
+	                                    stack.pop();
+	                                }
+	                            }else{
+	                                stack.push('}');
+	                            } break;
+	                case ']' : if(!stack.isEmpty()){
+	                                char c = stack.peek();
+	                                if(c== '['){
+	                                    stack.pop();
+	                                }
+	                            }else{
+	                                stack.push(']');
+	                            } break;
+	                case ')' : if(!stack.isEmpty()){
+	                                char c = stack.peek();
+	                                if(c == '('){
+	                                    stack.pop();
+	                                }
+	                            }else{
+	                                stack.push(')');
+	                            } break;
+	                default : stack.push(arr[i]);
+	            }
+	            
+	        }
+	        
+	        if(stack.empty()){
+	            return true;
+	        }else{
+	            return false;
+	        }
+	        
 	    }
 	 public static  boolean machingPair(char character1 , char character2){
 	        if (character1 == '(' && character2 == ')')

@@ -13,13 +13,12 @@ public class SumOfLeftLeaves {
 		tree.root.getLeft().setRight(new BinaryTreeNode(5));
 		tree.root.getRight().setLeft(new BinaryTreeNode(6));
 		tree.root.getRight().setRight(new BinaryTreeNode(7));
-		List<Double> l = new ArrayList<Double>();
-		l.add(0);
-	//	System.out.println(sum(tree.root));
+
+		System.out.println(sum(tree.root));
 	}
 
-	private static BinaryTreeNode invertTree(BinaryTreeNode root) {
-		/*int ans =0;
+	private static int sum(BinaryTreeNode root) {
+		int ans =0;
 		
 		if(root == null) {
 			return 0;
@@ -35,18 +34,9 @@ public class SumOfLeftLeaves {
 		if(root.getRight()!=null) {
 			 ans = ans + sum(root.getRight());
 		} 
-		return ans;*/
+		return ans;
 		
-		  
-        if(root == null){
-            return null;
-        }
-      
-        BinaryTreeNode temp = invertTree( root.getLeft());
-        invertTree(root.getLeft()) =  invertTree(root.getRight());
-        invertTree(root.getRight()) = temp;
-        
-        return root;
+	
 		
 	}
 

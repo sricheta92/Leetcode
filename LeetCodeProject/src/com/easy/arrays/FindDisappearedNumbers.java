@@ -6,25 +6,37 @@ import java.util.List;
 
 public class FindDisappearedNumbers {
 	
-	  public List<Integer> findDisappearedNumbers(int[] nums) {
-		  Arrays.sort(nums);
-		     List<Integer> list = new ArrayList<Integer>();
-		     int min = nums[0];
-		     int max = nums[nums.length-1];
-		     
-		     for(int i = 0;i<= nums.length-1;i++){
-		         if(min != nums[i]){
-		             list.add(min);
-		         }
-		         min++;
-		     }
-		     int[] stockArr = new int[list.size()];
-		     //return list.toArray();
-	  }
+	  public static List<Integer> findDisappearedNumbers(int[] nums) {
+	      
+		  boolean[] check = new boolean[nums.length];
+	        
+	        for(int i=0; i<check.length; i++)
+	        {
+	            check[nums[i]-1] = true;
+	        }
+	        
+	        List<Integer> missingNumbers = new ArrayList<>();
+	        
+	        for(int i=0; i<check.length; i++)
+	        {
+	            if(check[i] == false)
+	            {
+	                missingNumbers.add(i+1);
+	            }
+	        }
+	        
+	        return missingNumbers;   
+	      
+	      
+	    }
 	
 	
 	public static void main(String[] args) {
-		
+		int arr[] = {4,3,2,7,8,2,3,1};
+		List<Integer> l = findDisappearedNumbers(arr);
+		for(Integer i : l) {
+			System.out.print(i);
+		}
 	}
 	 
 
