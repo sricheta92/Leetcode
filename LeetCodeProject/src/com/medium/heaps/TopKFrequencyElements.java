@@ -1,4 +1,4 @@
-package com.heaps;
+package com.medium.heaps;
 
 import java.util.ArrayList;
 import java.util.Comparator;
