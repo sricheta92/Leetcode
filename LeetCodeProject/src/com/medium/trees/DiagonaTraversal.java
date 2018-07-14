@@ -44,7 +44,7 @@ public class DiagonaTraversal {
 			
 			if(node.node.getLeft()!=null) {
 				queue.add(new QItem(node.node.getLeft(),node.hd+1));
-			}
+			} 
 			
 			if(node.node.getRight()!=null) {
 				queue.add(new QItem(node.node.getRight(),node.hd));
