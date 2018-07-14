@@ -38,7 +38,7 @@ public class DiagonaTraversal {
 				map.get(node.hd).add(node.node.getData());
 			}else{
 				List<Integer> l = new ArrayList<Integer>();
-				l.add(node.node.getData());
+				l.add(node.node.getData()); 
 				map.put(node.hd, l);
 			}
 			
