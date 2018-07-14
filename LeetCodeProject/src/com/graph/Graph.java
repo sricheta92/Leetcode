@@ -1,14 +1,20 @@
 package com.graph;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
 import java.util.Queue;
+import java.util.Set;
 import java.util.Stack;
 
 public class Graph {
 
 	public int V;
+	public Set<Integer> vertices = new HashSet<Integer>();
+	public List<Edge> edges = new ArrayList<Edge>();
 	public LinkedList<Integer> adj[]  ;
 	
 	Graph(int num){
@@ -20,9 +26,18 @@ public class Graph {
 	}
 	
 	void addEdge(int v, int w){
+		vertices.add(v);
+		vertices.add(w);
+		edges.add(new Edge(v, w, 0));
 		adj[v].add(w);
 	}
 
+	void addEdge(int v1, int v2, int w ){
+		vertices.add(v1);
+		vertices.add(v2);
+		edges.add(new Edge(v1, v2, w));
+		adj[v1].add(v2);
+	}
 	public void dfs() {
 		
 		boolean[] visited = new boolean[V];
@@ -129,8 +144,14 @@ public class Graph {
         return distances;
 		
 	}
+
+	public Set<Integer> getVertices() {
+		return vertices;
+	}
 		
-	
+	public List<Edge> getEdges() {
+		return edges;
+	}
 
 	
 }

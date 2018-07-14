@@ -3,7 +3,8 @@ package com.easy.trees;
 public class BinaryTreeNode {
 	
 	private int data;
-	private BinaryTreeNode left,right;
+	public BinaryTreeNode left;
+	public BinaryTreeNode right;
 	
 	public BinaryTreeNode(int data){
 		this.data = data;
