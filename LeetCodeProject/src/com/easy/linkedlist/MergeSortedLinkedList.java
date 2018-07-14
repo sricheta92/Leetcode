@@ -18,17 +18,13 @@ public class MergeSortedLinkedList {
 		list2.insertAtBegininng(4);
 		list2.printList();
 		mergeLinkedList(list1,list2);*/
-	}
+	}	qwe
 
-	private static void mergeLinkedList(LinkedList list1, LinkedList list2) {
+	private static LinkedList mergeLinkedList(LinkedList list1, LinkedList list2) {
 		
-		int i=0,j=0;
-		int n1 = list1.getSize();
-		int n2 = list2.getSize();
-		LinkedList list3 = new LinkedList();
-		while(i<n1 && j<n2) {
-			//list3.insertAtEnd(data);
-		}
+		LinkedList res = new LinkedList();
+		
+		if(list1 == null) {return list2};
 		
 	}
 }

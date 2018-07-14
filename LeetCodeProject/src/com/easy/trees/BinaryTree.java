@@ -4,9 +4,9 @@ import java.util.Stack;
 
 public class BinaryTree {
 	
-	BinaryTreeNode root;
+	public BinaryTreeNode root;
 	
-	BinaryTree(){
+	public BinaryTree(){
 		root = null;
 	}
 		
