@@ -16,7 +16,7 @@ public class KruskalMST {
 	  //  graph.addEdge(3, 3);
 	    List<Edge> res = kruskalMST(graph);
 	    for(Edge i  :res) {
-	    	System.out.println(i.getWeight()+" ");
+	    	System.out.println(i.getWeight()+" "); 
 	    }
 	}
 
