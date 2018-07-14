@@ -6,7 +6,7 @@ public class FirstUniqueCharacterInString {
 		System.out.println(firstUniqChar("loveleetcode"));
 	}
 
-	private static int firstUniqChar(String s) {
+	private static int firstUniqChar(String s) { 
 		
 		char[] arr = s.toCharArray();
 		char[] count = new char[256];
