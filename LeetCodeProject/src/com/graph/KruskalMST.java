@@ -31,7 +31,7 @@ public class KruskalMST {
 		 List<Edge> res = new ArrayList<Edge>();
 		 Collections.sort(graph.getEdges());
 		
-		 for(Edge edge : graph.getEdges()) {
+		 for(Edge edge : graph.getEdges()) { 
 			 int p1 = set.findSet(edge.getVertex1());
 			 int p2 = set.findSet(edge.getVertex2());
 			 if(p1 != p2) {
