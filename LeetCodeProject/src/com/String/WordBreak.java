@@ -18,7 +18,7 @@ public class WordBreak {
 		System.out.println(wordBreakDP("catsandog", list));
 		wordBreakLeetcode("catsandog", list);   
 	}
-	
+	 
 	private static void wordBreakLeetcode(String string, List<String> list) {
 		
 		
