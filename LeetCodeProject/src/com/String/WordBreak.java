@@ -20,7 +20,7 @@ public class WordBreak {
 	}
 	 
 	private static void wordBreakLeetcode(String string, List<String> list) {
-		
+		 
 		  
 	}
 
