@@ -5,7 +5,7 @@ public class LargestCommonSubsequence {
 	 
 	public static void main(String[] args) {
 		System.out.println(largetsCommonSubsequenceDp("ABCDGH","AEDFHR"));
-	}
+	} 
 
 	private static int largetsCommonSubsequenceDp(String string1, String string2) {
 		 
