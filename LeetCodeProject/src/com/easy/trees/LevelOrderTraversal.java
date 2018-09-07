@@ -1,6 +1,7 @@
 package com.easy.trees;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -26,6 +27,7 @@ public class LevelOrderTraversal {
 	        List<Integer> l2 = new ArrayList<Integer>();
 	        l2.add(root.getData());
 	        l.add(l2);
+	        q.add(root);
 	        
 	        while(!q.isEmpty()){
 	            int n = q.size();
@@ -45,7 +47,20 @@ public class LevelOrderTraversal {
 	            l.add(l1);
 	        }
 	        
+	        print(l);
 	        return l;
 	    }
+
+	private static void print(List<List<Integer>> list) {
+		for(List l : list) {
+			Iterator it = l.iterator();
+			while(it.hasNext()) {
+				System.out.print(it.next()+"=> ");
+			}
+			System.out.println("");
+		}
+		
+		
+	}
 
 }

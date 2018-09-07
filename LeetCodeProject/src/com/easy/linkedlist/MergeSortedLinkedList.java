@@ -3,28 +3,41 @@ package com.easy.linkedlist;
 public class MergeSortedLinkedList {
 
 	public static void main(String[] args) {
-		LinkedList list1 = new LinkedList();
-		list1.insertAtBegininng(3);
-		list1.insertAtBegininng(2);
-		//list1.printList();
+		ListNode l1 = new ListNode(1);
+		l1.setNext(new ListNode(2));
+		l1.getNext().setNext(new ListNode(5));
 		
-		list1.reverse();
 		
-		list1.printList();
+		ListNode l2 = new ListNode(3);
+		l2.setNext(new ListNode(4));
+		l2.getNext().setNext(new ListNode(6));
+		LinkedList list = new LinkedList();
+		list.setHead(mergeLinkedList(l1,l2));
+		list.printList();
 		
-		/*System.out.println(" ");
-		LinkedList list2 = new LinkedList();
-		list2.insertAtBegininng(5);
-		list2.insertAtBegininng(4);
-		list2.printList();
-		mergeLinkedList(list1,list2);*/
-	}	qwe
+	}	
 
-	private static LinkedList mergeLinkedList(LinkedList list1, LinkedList list2) {
+	private static ListNode mergeLinkedList(ListNode list1, ListNode list2) {
 		
-		LinkedList res = new LinkedList();
+		ListNode result = null;
+		if(list1== null && list2== null) {
+			return null;
+		}
 		
-		if(list1 == null) {return list2};
+		if(list1 == null) {
+			return list2;
+		}
+		if(list2 == null) {
+			return list1;
+		}
 		
+		if(list1.getData()<=list2.getData()) {
+			result = list1;
+			result.setNext(mergeLinkedList(list1.getNext(),list2));
+		}else {
+			result = list2;
+			result.setNext(mergeLinkedList(list1,list2.getNext()));
+		}
+		return result;
 	}
 }

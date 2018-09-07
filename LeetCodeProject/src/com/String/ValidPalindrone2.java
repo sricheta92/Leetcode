@@ -2,34 +2,60 @@ package com.String;
 
 import javax.xml.bind.SchemaOutputResolver;
 
+// program to check whether it is possible to make
+//string palindrome by removing one character
 public class ValidPalindrone2 {
 	
 	public static void main(String[] args) {
 		String s = "abc";
-		System.out.println(isPalindrome(s));
+		System.out.println(validPalindrome(s));
 	}
 
-	private static boolean isPalindrome(String s) {
-		
-		int l =0;
-		int h = s.length()-1;
-		int count =0;
-		while(l<h) {
-			if(s.charAt(l++)!= s.charAt(h--)) {
-				count++;
-			}
-			
-		}
-		if(l==h && count ==1) {
-			return false;
-		}
-	
-		if(count==0 ||count==1) {
-			return true;
-		}else {
-			return false;
-		}
+	private static boolean validPalindrome(String s) {
+		  int l =0;
+	        int h = s.length()-1;
+	        
+	        while(l<h){
+	            if(s.charAt(l)== s.charAt(h)){
+	                l++;
+	                h--;
+	            }else{
+	            	/*  If removing str[low] makes the whole string palindrome.
+	                We basically check if substring str[low+1..high] is
+	                palindrome or not. */
+	                if(isPalindrome(s.substring(l+1, h+1))){
+	                    return true;
+	                }
+	                
+	                /*  If removing str[high] makes the whole string palindrome
+	                We basically check if substring str[low+1..high] is
+	                palindrome or not. */
+	                if(isPalindrome( s.substring(l, h))){
+	                    return true;
+	                }
+	                
+	                return false;
+	                
+	            }
+	        }
+	        
+	        
+	        return true;
 			
 	}
+	public static boolean isPalindrome(String s){
+	       
+	       int l =0;
+	       int h = s.length()-1;
+	       
+	       while(l<h){
+	           if(s.charAt(l++)!= s.charAt(h--)){
+	               return false;
+	           }
+	       }
+	       
+	       return true;
+	       
+	   }
 
 }

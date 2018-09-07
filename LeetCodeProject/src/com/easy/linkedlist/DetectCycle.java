@@ -23,6 +23,7 @@ public class DetectCycle {
 	public static void main(String[] args) {
 		
 		LinkedList llist =new LinkedList();
+		llist.setHead(new ListNode(22));
 		 llist.insertAtEnd(20);
 	        llist.insertAtEnd(4);
 	        llist.insertAtEnd(15);

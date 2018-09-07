@@ -26,6 +26,7 @@ public class VerticalOrderTraversal {
 	private static void verticalOrderTraversal(BinaryTreeNode root) {
 		
 		
+		
 		if(root == null) {
 			return;
 		}

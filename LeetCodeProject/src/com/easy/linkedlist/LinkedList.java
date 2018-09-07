@@ -13,7 +13,7 @@ public class LinkedList {
 
 	private int size;
 	
-	LinkedList(){
+	public LinkedList(){
 		head = null;
 		size = 0;
 	}
@@ -21,34 +21,56 @@ public class LinkedList {
 	public void insertAtBegininng(int data) {
 		
 		ListNode n = new ListNode(data);
-		
-		if(head == null) {
-			n.setNext(null);
-			head = n;
-		}else {
-			n.setNext(head);
-		}
+		n.setNext(head);
 		head = n;
 		size++;
 	}
 	
+	
 	public void insertAtEnd(int data) {
-		
-		ListNode n = new ListNode(data);
 		ListNode curr = head;
-		while(curr!=null &&curr.getNext()!=null) {
-			curr= curr.getNext();
+		while(curr.getNext()!=null) {
+			curr = curr.getNext();
 		}
-		if(head == null) {
-		head =n;
-		}else {
-		curr.setNext(n);
-		}
+		ListNode n = new ListNode(data);
 		n.setNext(null);
+		curr.setNext(n);
 		size++;
 	}
 	
+	public void insertAtMiddle(int data, int position) {
+		int count =0;
+		ListNode curr = head;
+		while(count!=position) {
+			curr= curr.getNext();
+			count++;
+		}
+		ListNode n= new ListNode(data);
+		ListNode next = curr.getNext();
+		curr.setNext(n);
+		n.setNext(next);
+	}
+	
+	public void deleteAtBeginning() {
+		if(head !=null) {
+			head = head.getNext();
+		}
+	}
+	
+	public void deleteAtEnd() {
+		ListNode curr = head;
+		if(curr.getNext()==null) {
+			curr=null;
+		}
+		while(curr.getNext().getNext()!=null) {
+			curr= curr.getNext();
+		}
+		curr.setNext(null);
+	}
+	
 	public void printList() {
+		
+		Integer.bitCount(3);
 		
 		ListNode curr = head;
 		while(curr!=null) {
@@ -72,5 +94,19 @@ public class LinkedList {
 		}
 		head = prev;
 		return prev;
+	}
+	
+	public void recursiveReverse(ListNode p) {
+		
+		if(p.next == null) {
+			head = p;
+			return;
+		}
+		recursiveReverse(p.next);
+		ListNode q = p.next;
+		q.next = p;
+		p.next = null;
+		
+		printList();
 	}
 }

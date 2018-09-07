@@ -23,6 +23,7 @@ public class TopViewOfTree {
 		topView(tree.root);
 	}
 
+	
 	private static void topView(BinaryTreeNode root) {
 		
 		Queue<QItem> queue = new LinkedList<QItem>();

@@ -3,6 +3,7 @@ package com.graph;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
@@ -38,6 +39,23 @@ public class Graph {
 		edges.add(new Edge(v1, v2, w));
 		adj[v1].add(v2);
 	}
+	
+	public Graph transpose(int V) {
+		
+		Graph g = new Graph(V);
+		for(int i =0;i<V;i++) {
+			Iterator<Integer> iter = g.adj[i].listIterator();
+			while(iter.hasNext()) {
+				//int neighbour = iter.next();
+				adj[iter.next()].add(i);
+			}
+		}
+		
+		return g;
+		
+	}
+
+
 	public void dfs() {
 		
 		boolean[] visited = new boolean[V];
@@ -50,7 +68,7 @@ public class Graph {
 		
 	}
 
-	private void dfsUtil(int i, boolean[] visited) {
+	public void dfsUtil(int i, boolean[] visited) {
 		
 		visited[i] = true;
 		System.out.print(i+" ");
@@ -153,5 +171,6 @@ public class Graph {
 		return edges;
 	}
 
+	
 	
 }
