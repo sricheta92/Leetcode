@@ -5,13 +5,13 @@ import java.util.Arrays;
 public class Subsets {
 
 	public static void main(String[] args) {
-		doSubsets(new int[]{1,2,3});
+		doSubsets(new int[]{1,2,2});
 	}
 
 	private static void doSubsets(int[] arr) {
 		
 		int[] A = new int[arr.length];
-		Arrays.sort(arr);
+		//Arrays.sort(arr);
 		backTrack(A,arr, 0, arr.length);
 		
 	}
@@ -22,6 +22,7 @@ public class Subsets {
 			process(a,arr);
 		}else {
 			for(int i =0;i<=1;i++) {
+				//if(a[i] == a[i+1]) continue;
 				a[level] = i;
 				backTrack(a, arr, level+1, length);
 			}

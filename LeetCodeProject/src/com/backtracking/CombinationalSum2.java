@@ -9,19 +9,21 @@ import java.util.Set;
 public class CombinationalSum2 {
 
 	public static void main(String[] args) {
-		Set<Integer> ar = new HashSet<>();
+		List<Integer> ar = new ArrayList<>();
+		//2,5,2,1,2
 		ar.add(2);
-		ar.add(4);
-		ar.add(6);
-		ar.add(8);
- 
-		int sum = 8; // set value of sum
+		ar.add(5);
+		ar.add(2);
+		ar.add(1);
+		ar.add(2);
+		Collections.sort(ar);
+		int sum = 5; // set value of sum
 		List<List<Integer>> res = combinationSum2(new ArrayList<Integer>(ar), sum);
 	}
 
 	private static List<List<Integer>> combinationSum2(ArrayList<Integer> ar, int sum) {
 		
-		Collections.sort(ar);
+		
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
 		List<Integer> list = new ArrayList<Integer>();
 		findSum(ar, res, list, sum , 0);

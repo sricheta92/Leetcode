@@ -10,9 +10,9 @@ public class DikshtraShortestPath {
 	
 	public static void main(String[] args) {
 		
-		WeightedGraph graph = new WeightedGraph(4);
+		WeightedGraph graph = new WeightedGraph(30);
 		graph.addEdge(0, 1,1);
-	    graph.addEdge(0, 2,9);
+	    graph.addEdge(1, 0,0);
 	    graph.addEdge(1, 2,3);
 	  //  graph.addEdge(2, 0);
 	    graph.addEdge(2, 3,4);
@@ -42,7 +42,7 @@ public class DikshtraShortestPath {
 			mset[n.vertice] = true;
 			for(Edge edge : edges) {
 				Node n1 = (Node)it.next();
-				if(mset[n1.vertice] == false &&	 n.key+ n1.< keys[n1.vertice].key) {
+				if(mset[n1.vertice] == false &&	 n.key+ \n1.< keys[n1.vertice].key) {
 					 q.remove(keys[n1.vertice]);
 					keys[n1.vertice].key = n.key;
 					q.add(keys[n1.vertice]);

@@ -12,6 +12,7 @@ public class LongestConsecutiveSubsequence {
 
 	private static int findLongestCommonSubsequence(int[] is) {
 		
+		is.
 		int ans =0;
 		Set<Integer> set = new HashSet<Integer>();
 		for(int i : is) {

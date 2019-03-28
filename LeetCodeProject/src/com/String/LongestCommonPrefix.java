@@ -1,5 +1,10 @@
 package com.String;
 
+/**
+ * O(NMlogM)
+ * @author Sricheta's computer
+ *
+ */
 public class LongestCommonPrefix {
 
 	public static void main(String[] args) {

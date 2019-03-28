@@ -3,7 +3,7 @@ package com.medium.arrays;
 public class FindFirstandLastPositionofElementinSortedArray {
 
 	public static void main(String[] args) {
-		search(new int[] {5,7,7,8,8,10}, 1);
+		search(new int[] {2,2}, 2);
 	}
 
 	private static int[] search(int[] arr, int key) {

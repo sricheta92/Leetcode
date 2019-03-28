@@ -17,7 +17,7 @@ public class BalancedBracket {
 	                case '[' : stack.push(']');break;
 	                case '(' : stack.push(')');break;
 	                default :  if(stack.isEmpty() || stack.pop() != c[i])
-	        			return false;
+	        			return "NO";
 	                
 	            }
 	        }

@@ -16,6 +16,7 @@ public class LargestCommonSubsequence {
 				if(string1.charAt(i-1) == string2.charAt(j-1)) {
 					cache[i][j] = cache[i-1][j-1]+1;
 				}else {
+					System.out.println(string1.charAt(i-1));
 					cache[i][j] = Math.max(cache[i-1][j], cache[i][j-1]);
 				}
 				if(cache[i][j]>max) {

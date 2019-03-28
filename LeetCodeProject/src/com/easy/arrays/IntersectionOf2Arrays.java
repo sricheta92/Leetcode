@@ -8,12 +8,40 @@ import java.util.Map;
 public class IntersectionOf2Arrays {
 	
 	public static void main(String[] args) {
-		intersect(new int[]{  1}, new int[]{1});
+		intersect(new int[]{  1, 2, 3, 4}, new int[]{1, 4, 6});
+		union(new int[] {1,2,3,4}, new int[] {5,6,7});
+	}
+
+	private static void union(int[] is, int[] is2) {
+		
+
+		int i =0;
+		int j =0;
+		int m = nums1.length;
+		int n = nums2.length;
 	}
 
 	private static int[] intersect(int[] nums1, int[] nums2) {
 		
-		Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+		int i =0;
+		int j =0;
+		int m = nums1.length;
+		int n = nums2.length;
+		
+		while(i< m && j< n) {
+			if(nums1[i] < nums2[j]) {
+				i++;
+			}
+			else if(nums1[i] > nums2[j]) {
+				j++;
+			}else {
+				System.out.println(nums1[i++]);
+				j++;
+			}
+		}
+		
+		return null;
+		/*Map<Integer,Integer> map = new HashMap<Integer,Integer>();
 		for(int i : nums1) {
 			map.put(i, map.getOrDefault(i, 0)+1);
 		}
@@ -27,15 +55,15 @@ public class IntersectionOf2Arrays {
                 }
             }
 			
-		}
+		}*/
 		
-		//return myList;
+	/*	//return myList;
         int[] arr = new int[myList.size()];
         int count=0;
         for(int i : myList){
             arr[count++] = i;
         }
-        return arr;
+        return arr;*/
 	}
 
 }

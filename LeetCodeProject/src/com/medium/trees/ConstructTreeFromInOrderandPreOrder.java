@@ -3,7 +3,8 @@ package com.medium.trees;
 import com.easy.trees.BinaryTreeNode;
 
 public class ConstructTreeFromInOrderandPreOrder {
-
+	
+	static int index =0;
 	public static void main(String[] args) {
 	//	BinaryTreeNode node = new BinaryTreeNode();
 		char in[] = new char[]{'D', 'B', 'E', 'A', 'F', 'C'};
@@ -16,7 +17,7 @@ public class ConstructTreeFromInOrderandPreOrder {
 		if(start>end) {
 			return null;
 		}
-		BinaryTreeNode node = new BinaryTreeNode(pre[0]);
+		BinaryTreeNode node = new BinaryTreeNode(pre[index++]);
 		
 		if(start == end) {
 			return node;

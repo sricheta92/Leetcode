@@ -10,7 +10,7 @@ public class ReverseInteger {
 
       while(y>0){
           i = y%10;
-          if(i != 0 ){
+          if(i != 0 ){ c 
               sb.append(i);
           }
           y = y/10;
@@ -18,11 +18,13 @@ public class ReverseInteger {
      int reverse = Integer.parseInt(sb.toString());
    
       return (x<0) ? -reverse : reverse;*/
-		 
+		 	
 		 int rev_num = 0;
 		 
 		 while(x>0) {
 			 rev_num = rev_num*10 + x%10;
+			// rev_num =  x%10;
+			 //System.out.print(rev_num+"");
 			 x = x/10;
 		 }
 		 return rev_num;

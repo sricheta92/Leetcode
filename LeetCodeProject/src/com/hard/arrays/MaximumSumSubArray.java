@@ -31,7 +31,7 @@ public class MaximumSumSubArray {
 				s = i+1; 
 			}
 		}
-		
+		System.out.println(start + " " +end);
 		System.out.println(max);
 		
 	}

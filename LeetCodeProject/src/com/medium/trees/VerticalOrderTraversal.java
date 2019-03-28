@@ -21,6 +21,15 @@ public class VerticalOrderTraversal {
 		tree.root.getRight().setLeft(new BinaryTreeNode(6));
 		tree.root.getRight().setRight(new BinaryTreeNode(7));
 		verticalOrderTraversal(tree.root);
+	//	verticalOrderTraversalRecursive(tree.root, 0);
+	}
+
+	private static void verticalOrderTraversalRecursive(BinaryTreeNode root) {
+		if(root == null) {
+			return;
+		}
+		
+		
 	}
 
 	private static void verticalOrderTraversal(BinaryTreeNode root) {

@@ -12,7 +12,7 @@ import java.util.Set;
 public class FourSum {
 
 	public static void main(String[] args) {
-		fourSum(new int[] {0,0,0,0}, 0);
+		fourSum(new int[] {1,2,3,4,5}, 10);
 
 	}
 
@@ -31,12 +31,12 @@ public class FourSum {
 					for(Pair p : map.get(val)) {
 						int x = p.x;
 						int y = p.y;
-						if((x!=i && y != i) && (y!=i && x != i) ) {
+						if((x!=i && y != i) && (y!=j && x != j) ) {
 							List<Integer> l = new ArrayList<Integer>();
 							l.add(nums[i]);
 							l.add(nums[j]);
 							l.add(nums[x]);
-							l.add(y);
+							l.add(nums[y]);
 							System.out.println(nums[x] +" "+ nums[y] +" "+  nums[i]  +" "+ nums[j]);
 							Collections.sort(l);
 							res.add(l);

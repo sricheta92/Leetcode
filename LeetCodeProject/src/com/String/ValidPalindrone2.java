@@ -8,7 +8,33 @@ public class ValidPalindrone2 {
 	
 	public static void main(String[] args) {
 		String s = "abc";
-		System.out.println(validPalindrome(s));
+		//System.out.println(validPalindrome(s));
+		System.out.println(validPalindrometest(s));
+	}
+
+	private static boolean validPalindrometest(String s) {
+		
+		char[] c = s.toCharArray();
+		int low =0;
+		int high = s.length() -1;
+		while(low<high) {
+			if(c[low]!=c[high]) {
+				   return isPalindrome(c, low+1, high) || isPalindrome(c, low, high-1);
+			}
+			 low++;
+	         high--;
+		}
+		return true;
+		
+	}
+
+	private static boolean isPalindrome(char[] c, int low, int high) {
+		  while(low< high){
+	            if(c[low++] != c[high--]){
+	                return false;
+	            }
+	        }
+	        return true;
 	}
 
 	private static boolean validPalindrome(String s) {
@@ -28,9 +54,9 @@ public class ValidPalindrone2 {
 	                }
 	                
 	                /*  If removing str[high] makes the whole string palindrome
-	                We basically check if substring str[low+1..high] is
+	                We basically check if substring str[low..high-1] is
 	                palindrome or not. */
-	                if(isPalindrome( s.substring(l, h))){
+	                if(isPalindrome( s.substring(l, h-1))){
 	                    return true;
 	                }
 	                

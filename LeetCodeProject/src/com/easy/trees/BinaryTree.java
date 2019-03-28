@@ -91,6 +91,20 @@ public class BinaryTree {
 		}
 		
 	}
+	
+	public BinaryTreeNode search(BinaryTreeNode root, int key) 
+	{ 
+	    // Base Cases: root is null or key is present at root 
+	    if (root==null || root.data==key) 
+	        return root; 
+	  
+	    // val is greater than root's key 
+	    if (root.data > key) 
+	        return search(root.left, key); 
+	  
+	    // val is less than root's key 
+	    return search(root.right, key); 
+	} 
 
 	public static void main(String[] args) {
 		

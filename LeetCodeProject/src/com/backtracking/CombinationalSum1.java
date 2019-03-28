@@ -11,11 +11,11 @@ public class CombinationalSum1 {
 	public static void main(String[] args) {
 		Set<Integer> ar = new HashSet<>();
 		ar.add(2);
-		ar.add(4);
+		ar.add(5);
 		ar.add(6);
-		ar.add(8);
+		ar.add(7);
  
-		int sum = 8; // set value of sum
+		int sum = 7; // set value of sum
 		List<List<Integer>> res = combinationSum(new ArrayList<Integer>(ar), sum);
 	}
 

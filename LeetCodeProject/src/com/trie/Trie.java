@@ -71,4 +71,19 @@ public class Trie {
 		
 		return true;
 	}
+	
+	public static void main(String[] args) {
+		Trie t = new Trie();
+		t.insert("Sricheta");
+		t.insert("Sri");
+		t.walkTrie();
+		System.out.println(t.startsWith("Sri"));
+	}
+
+	private void walkTrie() {
+		TrieNode curr = root;
+		
+		if(curr.)
+		
+	}
 }

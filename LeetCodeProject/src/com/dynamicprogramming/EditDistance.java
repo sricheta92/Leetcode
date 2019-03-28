@@ -2,7 +2,7 @@ package com.dynamicprogramming;
 
 public class EditDistance {
 	public static void main(String[] args) {
-		System.out.println(editDistance("horse","ros"));
+		System.out.println(editDistance("srich","sric"));
 		System.out.println(minDistance("horse","ros"));
 	}
 

@@ -4,9 +4,10 @@ public class MergeSortedArrays {
 	public static void main(String[] args) {
 		int[] arr1 = {1,3,5,7}; 
 		int[] arr2 = {2,4,6,8};
+		mergeArrays(arr1, arr2);
 	}
 
-	public  int[] mergeArrays(int[] arr1, int[] arr2) {
+	public static  int[] mergeArrays(int[] arr1, int[] arr2) {
 		
 		int n1 = arr1.length;
 		int n2 = arr2.length;

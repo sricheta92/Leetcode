@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/**
+ * Time complecity - O(N)
+ * @author Sricheta's computer
+ *
+ */
 public class NextGreaterElement {
 
 	public int[] nextGreaterElement(int[] findNums, int[] nums) {
@@ -19,6 +24,7 @@ public class NextGreaterElement {
 			findNums[i] = map.getOrDefault(findNums[i], -1);
 			System.out.print(findNums[i]  +" ");
 		}
+
 		return findNums;
 
 	}

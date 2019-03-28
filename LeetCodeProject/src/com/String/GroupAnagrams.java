@@ -27,9 +27,12 @@ public class GroupAnagrams {
 	            	 List<String> l = new ArrayList<String>();
 	            	 l.add(a);
 	            	 map.put(b, l);
+	            	 // map.put(b, new ArrayList<String>(a));
 	             }
 	             
 	        }
+	        
+	      
 	     
 	        for(Map.Entry<String, List<String>> ent: map.entrySet()) {
 	        	res.add(ent.getValue());

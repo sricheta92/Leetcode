@@ -57,6 +57,7 @@ public class SEarchInRotatedArray {
 		if(high == low) {
 			return low;
 		}
+		
 		int mid = low + (high -low)/2;
 		if(low<mid && arr[mid-1]>arr[mid]) {
 			return mid-1;

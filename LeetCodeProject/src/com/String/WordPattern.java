@@ -42,6 +42,11 @@ public class WordPattern {
 		}
 
 		return true;
+		
+		
+		
+		
+		
 
 	}
 

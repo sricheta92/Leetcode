@@ -42,7 +42,7 @@ public static void increasingBSTInorder(BinaryTreeNode root,  List<Integer> arr)
 	  if(root ==null){
           return;
       }
-	  Queue q = new
+
       increasingBSTInorder(root.left, arr);
       arr.add(root.data);
       increasingBSTInorder(root.right, arr);

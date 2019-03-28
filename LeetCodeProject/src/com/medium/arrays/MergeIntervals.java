@@ -14,7 +14,7 @@ class Interval {
 public class MergeIntervals {
 
 	public static void main(String[] args) {
-		[[1,3],[2,6],[8,10],[15,18]]
+	//	[[1,3],[2,6],[,10],[15,18]]
 	}
 
 	public static  List<Interval> merge(List<Interval> intervals) {
@@ -27,8 +27,7 @@ public class MergeIntervals {
 
 		Collections.sort(intervals, new Comparator<Interval>() {
 			public int compare(Interval i , Interval it) {
-				
-				
+
 				return i.start - it.start;
 				
 			}

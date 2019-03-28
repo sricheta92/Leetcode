@@ -1,10 +1,16 @@
 package com.graph;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.ListIterator;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
+import java.util.Set;
+/**
+ * Time complexity  O(E+ VlogV)
+ * @author Sricheta's computer
+ *
+ */
 public class PrimMST {
 
 
@@ -30,8 +36,10 @@ public class PrimMST {
 
       
        primMST(MST);
+    
         
     }
+
 
 	private static void primMST(WeightedGraph graph) {
 
@@ -70,6 +78,16 @@ public class PrimMST {
             }
            
         }
+	    
+	    printMST(graph, parent, keys);
+	}
+
+	private static void printMST(WeightedGraph graph, int[] parent, Node[] keys) {
+		
+		int vertice = graph.V;
+		for(int i =0;i<vertice;i++) {
+			System.out.println(parent[i] +" "+ i+ "->" + keys[i].key );
+		}
 	}
     
 }

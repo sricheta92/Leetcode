@@ -35,7 +35,7 @@ public class KruskalMST {
 			 int p1 = set.findSet(edge.getVertex1());
 			 int p2 = set.findSet(edge.getVertex2());
 			 if(p1 != p2) {
-				res.add(edge);
+				res.add(edge);    
 				set.union(edge.getVertex1(), edge.getVertex2());
 			 }
 		 }

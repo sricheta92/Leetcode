@@ -14,7 +14,7 @@ public class PartitionLinkedList {
 		llist.insertAtEnd(2);
 	    llist.insertAtEnd(5);
 	    llist.insertAtEnd(2);
-	    llist.insertAtEnd(3);
+	    llist.insertAtEnd(6);
 	    llist.insertAtEnd(4);
 	    llist.insertAtEnd(1);
 	    llist.printList();

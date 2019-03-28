@@ -2,11 +2,13 @@ package com.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
@@ -17,6 +19,18 @@ public class Graph {
 	public Set<Integer> vertices = new HashSet<Integer>();
 	public List<Edge> edges = new ArrayList<Edge>();
 	public LinkedList<Integer> adj[]  ;
+	
+	
+	PriorityQueue<Integer> queue = new PriorityQueue<Integer>(new Comparator<Integer>() {
+
+		@Override
+		public int compare(Integer o1, Integer o2) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+	});
+	
 	
 	Graph(int num){
 		this.V = num;
@@ -44,10 +58,10 @@ public class Graph {
 		
 		Graph g = new Graph(V);
 		for(int i =0;i<V;i++) {
-			Iterator<Integer> iter = g.adj[i].listIterator();
+			Iterator<Integer> iter = this.adj[i].listIterator();
 			while(iter.hasNext()) {
 				//int neighbour = iter.next();
-				adj[iter.next()].add(i);
+				g.adj[iter.next()].add(i);
 			}
 		}
 		
@@ -120,10 +134,10 @@ public class Graph {
 		}
 	}
 
-	private void topologicalSortUtil(int i, boolean[] visited, Stack<Integer> stack) {
+	public void topologicalSortUtil(int i, boolean[] visited, Stack<Integer> stack) {
 		
 		visited[i] = true;
-		ListIterator<Integer> it = adj[i].listIterator();
+		ListIterator<Integer>  it = adj[i].listIterator();
 		while(it.hasNext()) {
 			int n = it.next();
 			if(!visited[n]) {

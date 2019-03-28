@@ -3,7 +3,7 @@ package com.easy.arrays;
 public class TransposeOfMatrix {
 	
 	public static void main(String[] args) {
-		int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
+		int[][] matrix = {{1,2,3},{4,5,6}};
 		transpose(matrix);
 	}
 

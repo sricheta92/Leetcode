@@ -26,21 +26,13 @@ public class TopKFrequentWords {
 
 					@Override
 					public int compare(String arg0, String arg1) {
-						if( map.get(arg0) - map.get(arg1) == 0) {
-							return  arg1.compareTo(arg0);
-						}else {
-							return map.get(arg1) - map.get(arg0);
-						}
+						return map.get(arg1) - map.get(arg0);
 					}
 		        	
 		        });
 		        for(String num :nums){
-		            if(map.containsKey(num)){
-		                map.put(num, map.get(num)+1);
-		            }else{
-		               map.put(num, 1);
-		            }
-		            //queue.offer(map.)
+		           map.put(num, map.getOrDefault(num, 0)+1);
+		           queue.offer(num);
 		        }
 		      
 		        

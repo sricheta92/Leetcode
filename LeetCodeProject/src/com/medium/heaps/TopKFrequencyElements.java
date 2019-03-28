@@ -1,11 +1,11 @@
 package com.medium.heaps;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.PriorityQueue;
 
 public class TopKFrequencyElements {
@@ -20,20 +20,14 @@ public class TopKFrequencyElements {
 
 				@Override
 				public int compare(Integer arg0, Integer arg1) {
-					return map.get(arg0) - map.get(arg1);
+					return map.get(arg1) - map.get(arg0);
 				}
 	        	
 	        });
-	        for(int num :nums){
-	            if(map.containsKey(num)){
-	                map.put(num, map.get(num)+1);
-	            }else{
-	               map.put(num, map.get(num));
-	            }
-	            //queue.offer(map.)
-	        }
 	      
-	        
+	        for(int num :nums){
+	          map.put(num, map.getOrDefault(num, 0)+1);
+	        }
 	      for(int i : map.keySet()) {
 	    	  queue.offer(i);
 	      }

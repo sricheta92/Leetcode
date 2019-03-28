@@ -26,7 +26,6 @@ public class LongestPalindromeSubsequence {
 					arr[i][j] = Math.max(arr[i+1][j], arr[i][j-1]);
 				}
 			}
-			
 		}
 		
 		System.out.println( arr[0][s.length()-1]);
