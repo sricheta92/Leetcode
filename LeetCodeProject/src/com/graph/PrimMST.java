@@ -68,7 +68,7 @@ public class PrimMST {
             	 if (mset[v] == false && node.key < keys[v].key) {
                      q.remove(keys[v]); //remove that node from q
 
-                     keys[v].key = node.key; //change key
+                     keys[v].key = node.key; //chaxnge key
                      parent[v] = u.vertice;
                      q.add(keys[v]); //add back
                      //remove add can me made single function by using a visited flag

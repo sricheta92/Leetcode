@@ -69,8 +69,7 @@ public class SEarchInRotatedArray {
 			return findPivot(arr, low, mid-1);
 		}else {
 			return findPivot(arr, mid+1, high);
-		}
-		
+		}		
 	}
 
 }

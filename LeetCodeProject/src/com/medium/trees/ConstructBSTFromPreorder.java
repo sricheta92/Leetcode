@@ -11,32 +11,22 @@ public class ConstructBSTFromPreorder {
 
 	private static BinaryTreeNode buildTree(int[] preorder, int low, int high) {
 
-        if(low>high) {
-        	return null;
-        }
-        
-        int rootVal = preorder[low];
-        int startIndex = low+1;
-        BinaryTreeNode root  = new BinaryTreeNode(rootVal); 
-        while(startIndex < high && preorder[startIndex] < rootVal) {
-        	startIndex++;
-        }
+		if(low>high) {
+			return null;
+		}
 
-        root.left = buildTree(preorder, low+1,startIndex-1 );
-        root.right = buildTree(preorder, startIndex,high );
-        return root;
-    }
-    
-    public static int findPivot(int[] pre, int val, int j, int high) {
-        
-        for(int i =j;i<=high;i++){
-            if(pre[i] > val ){
-                return i;
-            }
-        }
-        return -1;
-    }
-		
+		int rootVal = preorder[low];
+		int startIndex = low+1;
+		BinaryTreeNode root  = new BinaryTreeNode(rootVal); 
+		while(startIndex < high && preorder[startIndex] < rootVal) {
+			startIndex++;
+		}
+
+		root.left = buildTree(preorder, low+1,startIndex-1 );
+		root.right = buildTree(preorder, startIndex,high );
+		return root;
 	}
+
+}
 
 

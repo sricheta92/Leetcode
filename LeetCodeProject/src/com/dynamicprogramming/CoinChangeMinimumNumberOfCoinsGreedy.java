@@ -7,8 +7,8 @@ public class CoinChangeMinimumNumberOfCoinsGreedy {
 
 	public static void main(String[] args) {
 		
-		System.out.println(coinChangeMinimumNumberOfCoins(70, new int[] {1, 2, 5, 10, 20, 50, 100}));
-		System.out.println(2^2^100);
+		System.out.println(coinChangeMinimumNumberOfCoins(3, new int[] { 2}));
+		//System.out.println(2^2^100);
 	}
 
 	private static int coinChangeMinimumNumberOfCoins(int sum, int[] coins) {

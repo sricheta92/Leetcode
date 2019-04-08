@@ -9,7 +9,7 @@ public class DecodeString {
 		System.out.println(decodeString("3[a]2[bc]"));
 	}
 
-	private static String decodeString(String str) {
+	private static String decodeString(String s) {
 		Stack<Integer> countStack = new Stack<Integer>();
 		Stack<String> resStack = new Stack<String>();
 
@@ -43,6 +43,8 @@ public class DecodeString {
 			
 		}
 		return res;
+		
+		
 	}
 
 }

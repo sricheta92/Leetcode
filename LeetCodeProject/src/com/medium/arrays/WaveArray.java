@@ -7,7 +7,7 @@ public class WaveArray {
 	public static void main(String[] args) {
 		doWaveArraySorting(new int[] {3, 6, 5, 10, 7, 20});
 		System.out.println("");
-		doWaveArray(new int[] {10, 90, 49, 2, 1, 5, 23});
+		doWaveArray(new int[] {3, 6, 5, 10, 7, 20});
 		
 	}
 	

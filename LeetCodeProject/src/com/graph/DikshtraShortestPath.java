@@ -27,7 +27,7 @@ public class DikshtraShortestPath {
 	private static Node[] dikshtra(WeightedGraph graph, int source) {
 		
 		Node[] keys = new Node[graph.V];
-		boolean[] mset = new boolean[graph.V];
+		boolean[] visited = new boolean[graph.V];
 		for(int i =0;i<keys.length;i++) {
 			keys[i] = new Node(i,Integer.MAX_VALUE);
 		}
@@ -39,16 +39,19 @@ public class DikshtraShortestPath {
 		while(!q.isEmpty()) {
 			Node n = q.poll();
 			List<Edge> edges = n.getEdges(n.vertice);
-			mset[n.vertice] = true;
+			
 			for(Edge edge : edges) {
-				Node n1 = (Node)it.next();
-				if(mset[n1.vertice] == false &&	 n.key+ \n1.< keys[n1.vertice].key) {
-					 q.remove(keys[n1.vertice]);
-					keys[n1.vertice].key = n.key;
-					q.add(keys[n1.vertice]);
-				}
-				
+				int n1 = edge.vertex2;
+				if(!visited[n1]) {
+					int newDistance = n.key+ edge.weight;
+					if(newDistance< n1) {
+						q.remove(keys[n1]);
+						keys[n1].key = newDistance;
+						q.add(keys[n1]);
+					}	
+				}	
 			}
+			visited[n.vertice] = true;
 		}
 		
 		return keys;

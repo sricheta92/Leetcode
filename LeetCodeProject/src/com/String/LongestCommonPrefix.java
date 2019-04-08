@@ -26,10 +26,9 @@ public class LongestCommonPrefix {
 		int low = 0;
 		int high = min;
 		String prefix ="";
-		while(low<=high) {
-			
-			int mid = low + (high-low)/2;
-			
+		
+		while(low<=high) {			
+			int mid = low + (high-low)/2;			
 			if(allContainPrefixes(arr, low, mid, minString)) {
 				prefix = prefix+ minString.substring(low, mid-low);
 				low = mid+1;
@@ -37,8 +36,7 @@ public class LongestCommonPrefix {
 			else {
 				high = mid-1; 
 			}
-		}
-		
+		}		
 		System.out.println(prefix);
 	}
 
