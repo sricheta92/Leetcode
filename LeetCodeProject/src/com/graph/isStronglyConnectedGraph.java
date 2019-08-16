@@ -2,6 +2,11 @@ package com.graph;
 
 import java.util.Iterator;
 
+/**
+ * Write : What is Strongly connected graph?
+ * @author ruj
+ *
+ */
 public class isStronglyConnectedGraph {
 	public static void main(String[] args) {
 		Graph graph = new Graph(4);

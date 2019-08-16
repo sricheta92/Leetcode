@@ -28,7 +28,7 @@ public class VerifyPreorderSerializationofaBinaryTree {
 			stack.push(curr);
 		}
 		
-		return stack.size() == 1 && stack.peek().equals("#")
+		return stack.size() == 1 && stack.peek().equals("#");
 		
 	}
 }

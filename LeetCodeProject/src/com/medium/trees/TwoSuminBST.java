@@ -25,9 +25,9 @@ public class TwoSuminBST {
 			return null;
 		}
 		
-		if(sum < root.val) {
-			twoSumInBST(root.left, sum)
-		}
+//		if(sum < root.val) {
+//			twoSumInBST(root.left, sum)
+//		}
 		
 	}
 

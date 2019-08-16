@@ -46,7 +46,7 @@ public class reorderedPowerOf2 {
 	        int onesN = Integer.bitCount(str);
 		
 	        if (l == r)
-	        	int reverseOnes = Integer.bitCount(Integer.parseInt(s));
+	        	int reverseOnes = Integer.bitCount(Integer.parseInt(str));
             
             if(onesN == 1 || reverseOnes ==1){
                 return true;
